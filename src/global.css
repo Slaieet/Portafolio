@@ -2,6 +2,14 @@ body {
   font-family: 'Montserrat Alternates', sans-serif;
 }
 
+.margin-top-default {
+  margin-top: 150px;
+}
+
+.box-shadow-one {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
 .icon-me::after {
   content: ' ';
   height: 9rem;
@@ -13,5 +21,20 @@ body {
   filter: blur(50px);
   z-index: -1;
 }
+
+.footer-card-projects::after {
+  content: ' ';
+  height: 160px;
+  width: 160px;
+  background: rgb(118,60,172);
+  background: radial-gradient(circle, rgba(118,60,172,1) 0%, rgba(50,15,133,1) 100%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  filter: blur(100px);
+  z-index: -1;
+}
+
 
 /*#763CAC to #320F85*/

@@ -4,10 +4,11 @@ export default {
 	theme: {
 		extend: {
 			backgroundColor: {
-				main: '#11071f'
+				main: '#11071f',
+				cage: '#1b1531'
 			},
 			textColor: {
-				main: '#fafafa'
+				main: '#fafafa',
 			}
 		},
 	},

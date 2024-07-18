@@ -1,0 +1,48 @@
+---
+
+interface Props {
+	reverse?: boolean;
+}
+
+const { reverse } = Astro.props
+
+---
+
+<article class="flex items-center gap-5" >
+  <header class:list={[
+    "w-1/2 flex-shrink-0",
+    {
+      "order-2": reverse
+    }
+  ]} >
+    <div class="mb-5">
+      <span class="text-[0.75rem] text-[rgb(193,127,255)]">E commmerce</span>
+      <strong class="block text-2xl">Project One</strong>
+    </div>
+
+    <div class="p-5 bg-cage rounded-lg box-shadow-one mb-5">
+      <p class="text-sm">DAplicación web para consultar información sobre películas mediante categorías, búsquedas y popularidad, utilizando la API de TMDB.</p>
+    </div>
+
+    <ul class:list={[
+      "flex flex-wrap gap-5 px-2",
+      {
+        "justify-end": reverse
+      }
+    ]}>
+      <li>
+        <img src="/icons/react.svg" alt="react icon" class="h-6">
+      </li>
+      <li>
+        <img src="/icons/vite.svg" alt="react icon" class="h-6">
+      </li>
+    </ul>
+  </header>
+
+  <footer class="w-1/2 footer-card-projects relative">
+    <img 
+      src="https://slaieet.com/assets/ecommerce--HFptmDq.webp"
+      class="w-full h-full"
+    >
+  </footer>
+</article>
