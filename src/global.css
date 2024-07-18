@@ -1,17 +1,17 @@
-@font-face {
-  font-family: 'Roboto';
-  src: url('/fonts/roboto/regular.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('/fonts/roboto/bold.ttf');
-  font-weight: bold;
-  font-style: normal;
-}
-
 body {
-  font-family: 'Roboto';
+  font-family: 'Montserrat Alternates', sans-serif;
 }
+
+.icon-me::after {
+  content: ' ';
+  height: 9rem;
+  width: 9rem;
+  position: absolute;
+  background: rgb(118,60,172);
+  background: radial-gradient(circle, rgba(118,60,172,1) 0%, rgba(50,15,133,1) 100%);
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: -1;
+}
+
+/*#763CAC to #320F85*/
