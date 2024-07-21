@@ -36,5 +36,8 @@ body {
   z-index: -1;
 }
 
+.transition-transform {
+  transition: transform 0.1s ease;
+}
 
 /*#763CAC to #320F85*/

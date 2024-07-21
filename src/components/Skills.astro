@@ -1,0 +1,28 @@
+---
+import { technologies } from '../utils/technologies.ts'
+---
+
+<section class="margin-top-default" >
+  <h2 class="text-3xl font-bold text-center mb-20">Tecnologias que manejo</h2>
+
+  <ul class="flex justify-center gap-12 flex-wrap">
+    {technologies.map(technologie => (
+      <li>
+        <img 
+          src={technologie.url}
+          alt={`${technologie.name} icon`}
+          class="h-8 hover:scale-125 transition-transform"
+          title={technologie.name}
+        >
+      </li>
+    ))}
+    <li>
+      <img 
+        src="/icons/next.svg" 
+        alt='Next js icon'
+        class="h-8 bg-white rounded-full hover:scale-125 transition-transform"
+        title="Next"
+      >
+    </li>
+  </ul>
+</section>
