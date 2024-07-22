@@ -14,9 +14,9 @@ const { title, description, extra, technologiesUsed, imageUrl, reverse, projectP
 
 ---
 
-<article class="flex items-center gap-6" >
+<article class="flex flex-col md:flex-row items-center gap-10 md:gap-6" >
   <header class:list={[
-    "w-1/2 flex-shrink-0",
+    "w-full md:w-1/2 flex-shrink-0 order-2",
     {
       "order-2": reverse
     }  ]} >
@@ -32,7 +32,7 @@ const { title, description, extra, technologiesUsed, imageUrl, reverse, projectP
     <ul class:list={[
       "flex flex-wrap gap-5 px-2",
       {
-        "justify-end": reverse
+        "md:justify-end": reverse
       }
     ]}>
       {
@@ -49,9 +49,9 @@ const { title, description, extra, technologiesUsed, imageUrl, reverse, projectP
     </ul>
   </header>
 
-  <footer class="w-1/2 footer-card-projects relative">
+  <footer class="w-full md:w-1/2 footer-card-projects relative">
     <a href={projectPageUrl} target="_blank" class="block">
-      <img 
+      <img
         src={imageUrl}
         class="w-full h-full rounded-md"
       >
