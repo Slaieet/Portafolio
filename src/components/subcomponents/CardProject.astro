@@ -1,10 +1,15 @@
 ---
 
 interface Props {
-	reverse?: boolean;
+  title: string
+  description: string
+  extra: string
+  technologiesUsed: string[]
+  imageUrl: string
+	reverse?: boolean
 }
 
-const { reverse } = Astro.props
+const { title, description, extra, technologiesUsed, imageUrl, reverse } = Astro.props
 
 ---
 
@@ -13,15 +18,14 @@ const { reverse } = Astro.props
     "w-1/2 flex-shrink-0",
     {
       "order-2": reverse
-    }
-  ]} >
+    }  ]} >
     <div class="mb-5">
-      <span class="text-[0.75rem] text-[rgb(193,127,255)]">E commmerce</span>
-      <strong class="block text-2xl">Project One</strong>
+      <span class="text-[0.75rem] text-[rgb(193,127,255)]">{extra}</span>
+      <strong class="block text-2xl">{title}</strong>
     </div>
 
     <div class="p-5 bg-cage rounded-lg box-shadow-one mb-5">
-      <p class="text-sm">DAplicación web para consultar información sobre películas mediante categorías, búsquedas y popularidad, utilizando la API de TMDB.</p>
+      <p class="text-sm">{description}</p>
     </div>
 
     <ul class:list={[
@@ -30,12 +34,17 @@ const { reverse } = Astro.props
         "justify-end": reverse
       }
     ]}>
-      <li>
-        <img src="/icons/react.svg" alt="react icon" class="h-6">
-      </li>
-      <li>
-        <img src="/icons/vite.svg" alt="react icon" class="h-6">
-      </li>
+      {
+        technologiesUsed.map(technologieUsed => (
+          <li>
+            <img 
+              src={`/icons/${technologieUsed}.svg`}
+              alt="" 
+              class="h-6"
+            >
+          </li>
+        ))
+      }
     </ul>
   </header>
 

@@ -12,19 +12,23 @@ export const technologies = [
     url: '/icons/js.svg'
   },
   {
-    name: 'React',
-    url: '/icons/react.svg'
-  },
-  {
     name: 'TypeScript',
     url: '/icons/typescript.svg'
   },
   {
-    name: 'Astro',
-    url: '/icons/astro.svg'
+    name: 'React',
+    url: '/icons/react.svg'
+  },
+  {
+    name: 'Tailwind',
+    url: '/icons/tailwind.svg'
   },
   {
     name: 'Vite',
     url: '/icons/vite.svg'
+  },
+  {
+    name: 'Astro',
+    url: '/icons/astro.svg'
   }
 ]

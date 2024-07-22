@@ -1,18 +1,31 @@
 ---
   import CardProject from "./subcomponents/CardProject.astro"
+
+  const projects = [
+    {
+      title: 'Fake E-commerce',
+      description: 'Desarrollo de un e-commerce simulado. Integración con API para obtener datos. Implementación de funcionalidades de carrito de compras y lista de deseos.',
+      extra: 'E-commerce',
+      technologiesUsed: ['react', 'tailwind', 'vite'],
+      imageUrl: '/images/ecommerce.webp'
+    }
+  ]
+
 ---
 
 <section class="margin-top-default">
   <h2 class="block text-4xl mb-20 font-bold">Proyectos</h2>
   <ul class="flex flex-col gap-32">
-    <li>
-      <CardProject />
-    </li>
-    <li>
-      <CardProject reverse />
-    </li>
-    <li>
-      <CardProject />
-    </li>
+    {projects.map(project => {
+      return (
+        <CardProject 
+          title={project.title}
+          description={project.description}
+          extra={project.extra}
+          technologiesUsed={project.technologiesUsed}
+          imageUrl={project.imageUrl}
+        />
+      )
+    })}
   </ul>
 </section>
