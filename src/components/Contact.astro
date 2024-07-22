@@ -1,13 +1,25 @@
 ---
-
+  import { socialMediaIcons } from "../utils/icons";
 ---
 
 <footer class="margin-top-default">
   <h2 class="text-2xl font-bold mb-10">Contacto</h2>
 
   <article>
-    <p class="mb-10" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora necessitatibus possimus ipsam, adipisci beatae nesciunt mollitia vero alias asperiores ducimus nobis iure, consequatur magni, rerum debitis minus? Amet, repellendus cupiditate.</p>
+    <p class="mb-8">¿Te gustaría trabajar conmigo o tienes alguna consulta? Estoy disponible para nuevas oportunidades y colaboraciones. Puedes contactarme a través de los siguientes canales:</p>
 
-    <a href="mailto:micorreo@gmail.com" class="block">micorreo@gmail.com</a>
+    <span class="block text-sm mb-6">- aj2370067@gmail.com</span>
+
+    <ul class="flex gap-5">
+      {
+        socialMediaIcons.map(social => (
+          <li>
+            <a href={social.url} target="_blank" class="inline-block box-content p-1 hover:scale-125 transition-transform">
+              <img src={social.imgUrl} alt={`${social.name} icon`} class="h-6">
+            </a>
+          </li>
+        ))
+      }
+    </ul>
   </article>
 </footer>
