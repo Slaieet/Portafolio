@@ -5,9 +5,26 @@
     {
       title: 'Fake E-commerce',
       description: 'Desarrollo de un e-commerce simulado. Integración con API para obtener datos. Implementación de funcionalidades de carrito de compras y lista de deseos.',
-      extra: 'E-commerce',
+      extra: 'Primero',
       technologiesUsed: ['react', 'tailwind', 'vite'],
-      imageUrl: '/images/ecommerce.webp'
+      imageUrl: '/images/ecommerce.webp',
+      projectPageUrl: 'https://fake-e-commerce.pages.dev/'
+    },
+    {
+      title: 'Info movies',
+      description: 'Aplicación web para consultar información sobre películas mediante categorías, búsquedas y popularidad, utilizando la API de TMDB.',
+      extra: 'Segundo',
+      technologiesUsed: ['react', 'tailwind', 'vite'],
+      imageUrl: '/images/info-movie-app.webp',
+      projectPageUrl: 'https://info-movies.pages.dev/'
+    },
+    {
+      title: 'ChatAI',
+      description: 'Chatbot desarrollado con el recurso Web-LLM. Su ejecución es 100% local una vez descargado el modelo de IA.',
+      extra: 'Tercero',
+      technologiesUsed: ['html', 'css', 'js'],
+      imageUrl: '/images/chatAI.webp',
+      projectPageUrl: 'https://chat-ai-six-omega.vercel.app/'
     }
   ]
 
@@ -16,7 +33,7 @@
 <section class="margin-top-default">
   <h2 class="block text-4xl mb-20 font-bold">Proyectos</h2>
   <ul class="flex flex-col gap-32">
-    {projects.map(project => {
+    {projects.map((project, i) => {
       return (
         <CardProject 
           title={project.title}
@@ -24,6 +41,8 @@
           extra={project.extra}
           technologiesUsed={project.technologiesUsed}
           imageUrl={project.imageUrl}
+          projectPageUrl={project.projectPageUrl}
+          reverse={(i + 1) % 2 === 0}
         />
       )
     })}

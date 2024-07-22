@@ -6,14 +6,15 @@ interface Props {
   extra: string
   technologiesUsed: string[]
   imageUrl: string
+  projectPageUrl: string
 	reverse?: boolean
 }
 
-const { title, description, extra, technologiesUsed, imageUrl, reverse } = Astro.props
+const { title, description, extra, technologiesUsed, imageUrl, reverse, projectPageUrl } = Astro.props
 
 ---
 
-<article class="flex items-center gap-5" >
+<article class="flex items-center gap-6" >
   <header class:list={[
     "w-1/2 flex-shrink-0",
     {
@@ -37,9 +38,9 @@ const { title, description, extra, technologiesUsed, imageUrl, reverse } = Astro
       {
         technologiesUsed.map(technologieUsed => (
           <li>
-            <img 
+            <img
               src={`/icons/${technologieUsed}.svg`}
-              alt="" 
+              alt={`${technologieUsed} icon`}
               class="h-6"
             >
           </li>
@@ -49,9 +50,11 @@ const { title, description, extra, technologiesUsed, imageUrl, reverse } = Astro
   </header>
 
   <footer class="w-1/2 footer-card-projects relative">
-    <img 
-      src="https://slaieet.com/assets/ecommerce--HFptmDq.webp"
-      class="w-full h-full"
-    >
+    <a href={projectPageUrl} target="_blank" class="block">
+      <img 
+        src={imageUrl}
+        class="w-full h-full rounded-md"
+      >
+    </a>
   </footer>
 </article>
