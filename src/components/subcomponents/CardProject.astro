@@ -16,9 +16,9 @@ const { title, description, extra, technologiesUsed, imageUrl, reverse, projectP
 
 <article class="flex flex-col md:flex-row items-center gap-10 md:gap-6" >
   <header class:list={[
-    "w-full md:w-1/2 flex-shrink-0 order-2",
+    "w-full md:w-1/2 flex-shrink-0 order-2 md:order-none",
     {
-      "order-2": reverse
+      "!order-2": reverse
     }  ]} >
     <div class="mb-5">
       <span class="text-[0.75rem] text-[rgb(193,127,255)]">{extra}</span>
@@ -54,6 +54,7 @@ const { title, description, extra, technologiesUsed, imageUrl, reverse, projectP
       <img
         src={imageUrl}
         class="w-full h-full rounded-md"
+        loading="lazy"
       >
     </a>
   </footer>
