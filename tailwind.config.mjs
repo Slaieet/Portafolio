@@ -9,6 +9,7 @@ export default {
 			},
 			textColor: {
 				main: '#fafafa',
+				secondary: '#C17FFF'
 			}
 		},
 	},
