@@ -40,5 +40,12 @@ body {
   z-index: -1;
 }
 
+.perspective-left {
+  transform: perspective(500px) rotateY(-4deg);
+}
+
+.perspective-rigth {
+  transform: perspective(500px) rotateY(4deg);
+}
 
 /*#763CAC to #320F85*/

@@ -53,7 +53,12 @@ const { title, description, extra, technologiesUsed, imageUrl, reverse, projectP
     <a href={projectPageUrl} target="_blank" class="block">
       <img
         src={imageUrl}
-        class="w-full h-full rounded-md"
+        class:list={[
+          "w-full h-full rounded-md perspective-left",
+          {
+            "perspective-rigth": reverse
+          }
+        ]}
         loading="lazy"
       >
     </a>
