@@ -35,7 +35,8 @@
   <ul class="flex flex-col gap-32">
     {projects.map((project, i) => {
       return (
-        <CardProject 
+        <li class="block">
+          <CardProject 
           title={project.title}
           description={project.description}
           extra={project.extra}
@@ -43,7 +44,8 @@
           imageUrl={project.imageUrl}
           projectPageUrl={project.projectPageUrl}
           reverse={(i + 1) % 2 === 0}
-        />
+          />
+        </li>
       )
     })}
   </ul>
