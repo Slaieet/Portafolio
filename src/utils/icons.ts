@@ -31,6 +31,10 @@ export const technologies = [
     name: "Astro",
     url: "/icons/astro.svg",
   },
+  {
+    name: "Next",
+    url: "/icons/next.svg",
+  },
 ];
 
 export const socialMediaIcons = [
