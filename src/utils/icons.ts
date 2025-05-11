@@ -39,6 +39,11 @@ export const technologies = [
 
 export const socialMediaIcons = [
   {
+    name: "WhatsApp",
+    imgUrl: "/icons/social-media/whatsapp.svg",
+    url: "https://wa.me/524775354327",
+  },
+  {
     name: "Instagram",
     imgUrl: "/icons/social-media/instagram.svg",
     url: "https://www.instagram.com/slaieet",
